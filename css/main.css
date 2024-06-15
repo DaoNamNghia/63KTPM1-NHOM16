@@ -22,12 +22,10 @@
 }
 .header-container .navigation {
   margin-left: 2rem;
-  margin-right: 2rem;
 }
 .header-container .navigation ul {
   display: flex;
   align-items: center;
-  gap: 1rem;
 }
 .header-container .navigation ul li {
   list-style: none;
@@ -37,7 +35,7 @@
 .header-container .navigation ul li:hover a {
   color: white;
   background-color: black;
-  transition: 0.3s ease;
+  transition: 0.4s ease-in-out;
 }
 .header-container .navigation ul li a {
   display: inline;
@@ -48,8 +46,8 @@
 }
 .header-container .search {
   position: relative;
-  margin-left: 150px;
-  margin-right: 3rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
 }
 .header-container .search input {
   padding: 15px;
@@ -86,6 +84,7 @@
 }
 
 /* homepage */
+
 .slideshow {
   display: flex;
   justify-content: center;
@@ -106,10 +105,11 @@
 .list-item .best-seller .img-wrapper {
   display: flex;
   gap: 30px;
+  justify-content: center;
 }
 .list-item .best-seller .img-wrapper img {
-  height: 320px;
-  width: 640px;
+  height: 241px;
+  width: 513px;
 }
 .list-item .title-wrapper {
   margin-top: 15px;
@@ -139,14 +139,18 @@
   right: 0;
   background-color: #8282825c;
 }
-.list-item .T-shirt,
-.list-time .best-seller {
-  width: 1310px;
+
+.list-item .best-seller,
+.list-item .T-shirt {
+  width: 1050px;
   margin-top: 20px;
 }
+.list-item .T-shirt .img-wrapper {
+  display: flex;
+}
 .list-item .T-shirt img {
-  width: 321px;
-  height: 321px;
+  width: 250px;
+  height: 250px;
 }
 
 /* footer */
@@ -156,7 +160,7 @@
 }
 .hotline {
   height: 60px;
-  background-color: #d9d9d9;
+  background-color: #d9d9d978;
 }
 .footer-wrapper .hotline .container {
   height: 100%;
@@ -165,7 +169,7 @@
 }
 .footer-wrapper .hotline .container .help {
   margin-left: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .footer-wrapper .hotline .container i {
   font-size: 22px;
@@ -180,16 +184,25 @@
 }
 .footer-wrapper .container-wrapper .info-wrapper {
   display: flex;
-  gap: 13rem;
+  gap: 3rem;
 }
-.footer-wrapper .container-wrapper .info-wrapper .righ-info .company {
+.footer-wrapper .container-wrapper .info-wrapper .intro {
+  margin-bottom: 20px;
+}
+.footer-wrapper .container-wrapper .info-wrapper .aim {
+  font-size: 0.9rem;
+}
+.footer-wrapper .container-wrapper .info-wrapper .right-info .company {
   margin: 2rem 0;
   font-weight: 600;
 }
-.footer-wrapper .container-wrapper .info-wrapper .righ-info .loca1,
-.footer-wrapper .container-wrapper .info-wrapper .righ-info .loca2,
-.footer-wrapper .container-wrapper .info-wrapper .righ-info .phone,
-.footer-wrapper .container-wrapper .info-wrapper .righ-info .email {
+.footer-wrapper .container-wrapper .info-wrapper .right-info .loca1,
+.footer-wrapper .container-wrapper .info-wrapper .right-info .loca2,
+.footer-wrapper .container-wrapper .info-wrapper .right-info .phone,
+.footer-wrapper .container-wrapper .info-wrapper .right-info .email {
   display: flex;
   gap: 5px;
+}
+.footer-wrapper .container-wrapper .info-wrapper .right-info :not(.contact) {
+  font-size: 0.9rem;
 }

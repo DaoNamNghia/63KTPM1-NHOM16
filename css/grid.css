@@ -22,7 +22,7 @@ Khi gọi class ở màn hình nào chỉ hoạt động ở màn hình đó tr�
   box-sizing: border-box;
 }
 :root {
-  --container-width: 1300px;
+  --container-width: 900px;
   --column-space: 20px;
 }
 .container {

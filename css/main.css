@@ -206,3 +206,164 @@
 .footer-wrapper .container-wrapper .info-wrapper .right-info :not(.contact) {
   font-size: 0.9rem;
 }
+
+/* couponPage */
+
+.coupon-wrapper .coupon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.coupon-wrapper .coupon img {
+  min-width: 100px;
+}
+.coupon-wrapper .coupon.group1 {
+  justify-content: space-between;
+}
+.coupon-wrapper .coupon.group1 img {
+  width: 750px;
+  height: 320px;
+}
+.coupon-wrapper .coupon.group2 img {
+  width: 800px;
+  height: 380px;
+}
+.coupon-wrapper .coupon.group3 img,
+.coupon-wrapper .coupon.group4 img {
+  width: 100%;
+  height: 190px;
+}
+
+/* couponList */
+
+main .title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .title-wrapper .content {
+  margin-left: 20px;
+  color: black;
+  font-weight: 600;
+}
+main .title-wrapper .action {
+  margin-right: 40px;
+}
+main .title-wrapper .action .addBtn,
+main .title-wrapper .action .escBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 100px;
+  height: 40px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+.table-wrapper {
+  margin-top: 3rem;
+}
+.table-wrapper table.custom-table.my-table {
+  background-color: #828282;
+}
+table.table tr {
+  color: black;
+  height: 5rem;
+  /* border: 1px solid red; */
+}
+table.table tr th,
+table.table tr td {
+  text-align: center;
+  align-content: center;
+}
+.table-wrapper tbody .action i {
+  margin-right: 1.2rem;
+  font-size: 1.2rem;
+}
+
+/* couponAdd */
+form {
+  background-color: #d9d9d9;
+  padding: 3rem 2rem;
+}
+
+form.info input,
+form.info select {
+  background-color: #f9f3e9;
+  height: 2rem;
+  width: 70%;
+}
+
+form .info .dataField label {
+  margin-bottom: 20px;
+}
+form .info {
+  margin-bottom: 3rem;
+  display: flex;
+}
+form .info .title {
+  margin-right: 2rem;
+  width: 15%;
+}
+
+form .info .dataField {
+  background-color: #fff;
+  padding: 15px;
+  padding-left: 5rem;
+  width: 85%;
+  display: flex;
+}
+form .normal.info .dataField {
+  height: 200px;
+}
+form .sale.info .dataField {
+  height: fit-content;
+}
+form .info .dataField .col-4 {
+  display: flex;
+  flex-direction: column;
+}
+form .sale.info .dataField .saleEvent {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  gap: 2rem;
+}
+form .sale.info .dataField .saleEvent input {
+  width: 1rem;
+}
+form .sale.info .dataField .saleEvent p {
+  margin: 0;
+}
+
+form .timeUse.info {
+  margin-top: 7rem;
+}
+
+form .timeUse.info .dataField .input-wrapper img {
+  height: 30px;
+
+  right: 0;
+}
+form .btn-wrapper {
+  text-align: center;
+}
+form .btn-wrapper button {
+  background-color: white;
+  color: black;
+  padding: 0.8rem 4rem;
+}
+
+form .timeUse.info .dataField input {
+  width: 180px;
+}
+
+form .timeUse.info .dataField .startDay {
+  margin-right: 13rem;
+}
+main .title-wrapper {
+  margin-bottom: 3.5rem;
+}

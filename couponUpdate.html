@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>couponUpdate</title>
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="couponAdd">
+      <div class="title-wrapper">
+        <div class="content">Quản lý coupon:Sửa</div>
+        <div class="action">
+          <div class="escBtn">Thoát</div>
+        </div>
+      </div>
+      <!-- end title-wrapper -->
+      <form action="" class="info">
+        <div class="normal info">
+          <div class="title">Thông tin cơ bản</div>
+          <div class="dataField">
+            <div class="row">
+              <div class="name col-4">
+                <label for="name">Tên mã</label>
+                <input id="name" type="text" name="name" />
+              </div>
+              <!-- end name -->
+              <div class="typeDiscount col-4">
+                <label for="typeDiscount">Loại giá trị giảm</label>
+                <select name="typeDiscount" id="typeDiscount">
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <!-- end typeDiscount -->
+              <div class="discountValue col-4">
+                <label for="">Giá trị giảm</label>
+                <input type="text" id="discountValue" name="discountValue" />
+              </div>
+              <!-- end discountValue -->
+              <div class="limitUse col-4">
+                <label for="limitUse">Giới hạn số lần sử dụng </label>
+                <input type="text" id="limitUse" name="limitUse" />
+              </div>
+              <!-- end limitUse -->
+              <div class="limitValue col-4">
+                <label for="limitValue">Giá trị đơn hàng tối thiểu </label>
+                <input type="text" id="limitValue" name="limitValue" />
+              </div>
+              <!-- end limitValue -->
+              <div class="status col-4">
+                <label for="status">Trạng thái</label>
+                <select name="status" id="status">
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <!-- end status -->
+            </div>
+          </div>
+          <!-- end dataField -->
+        </div>
+        <!-- end .normal.info -->
+        <div class="sale info">
+          <div class="title">Chương trình khuyễn mãi</div>
+          <div class="dataField">
+            <div class="saleEvent">
+              <input type="radio" name="" id="" />
+              <p>Áp dụng với chương trình khuyến mãi</p>
+            </div>
+          </div>
+          <!-- end dataField -->
+        </div>
+        <!-- end .sale.info -->
+        <div class="timeUse info">
+          <div class="title">Thời gian sử dụng</div>
+          <div class="dataField">
+            <div class="startDay">
+              <label for="startDay">Ngày bắt đầu</label>
+              <div class="input-wrapper">
+                <input type="date" id="dateInput" name="startDay" />
+              </div>
+            </div>
+            <div class="endDay">
+              <label for="endDay">Ngày kết thúc</label>
+              <div class="input-wrapper">
+                <input type="date" id="dateInput" name="endDay" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-wrapper"><button class="add">Thêm</button></div>
+      </form>
+    </main>
+    <div id="footer"></div>
+    <script src="./js/loadComponents.js"></script>
+    <script src="./js/couponUpdate.js"></script>
+  </body>
+</html>

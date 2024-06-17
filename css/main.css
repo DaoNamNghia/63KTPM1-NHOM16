@@ -367,3 +367,28 @@ form .timeUse.info .dataField .startDay {
 main .title-wrapper {
   margin-bottom: 3.5rem;
 }
+/* toastBox */
+.toastBox {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.customToast {
+  width: 400px;
+  height: 3rem;
+  background-color: #d9d9d9;
+  font-weight: 600;
+  margin: 15px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.customToast i {
+  margin-right: 20px;
+}

@@ -10,6 +10,7 @@ escBtn.addEventListener("click", function () {
 var form = document.querySelector("form");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  console.log("hello");
 });
 
 //Thêm mới dữ liệu
@@ -61,7 +62,7 @@ function renderProducts(products) {
     <td>
       <div class="action">
         <i class="fa-solid fa-eye"></i>
-        <i class="fa-solid fa-pencil"></i>
+        <i class="fa-solid fa-pencil" data-id="${product.id}"></i>
            <i class="fa-solid fa-trash" data-id="${product.id}"></i>
       </div>
     </td>
@@ -100,9 +101,7 @@ function handleCreateProducts() {
     createProducts(formData, function () {
       getProducts(renderProducts);
       showToast(successMsg);
-      // setTimeout(function () {
-      //   window.location.href = "./../couponList.html";
-      // }, 5000);
+      window.location.href = "./../couponList.html";
     });
     console.log(index);
   });

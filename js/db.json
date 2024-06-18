@@ -1,13 +1,81 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "tilte": "title 3",
+      "views": 300
     }
-  }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "id": "0607",
+      "ma": "",
+      "thoiGian": "-",
+      "giaTriGiam": "",
+      "luotSuDung": "",
+      "minUse": "",
+      "trangThai": ""
+    },
+    {
+      "id": "0910",
+      "ma": "",
+      "thoiGian": "-",
+      "giaTriGiam": "",
+      "luotSuDung": "",
+      "minUse": "",
+      "trangThai": ""
+    },
+    {
+      "id": "b579",
+      "ma": "",
+      "thoiGian": "-",
+      "giaTriGiam": "",
+      "luotSuDung": "",
+      "minUse": "",
+      "trangThai": ""
+    },
+    {
+      "id": "df91",
+      "ma": "a",
+      "thoiGian": "2024-06-27-2024-06-06",
+      "giaTriGiam": "a",
+      "luotSuDung": "a",
+      "minUse": "a",
+      "trangThai": "3"
+    },
+    {
+      "id": "8b9b",
+      "ma": "a",
+      "thoiGian": "2024-06-29-2024-06-05",
+      "giaTriGiam": "a",
+      "luotSuDung": "a",
+      "minUse": "a",
+      "trangThai": "1"
+    }
+  ]
+}

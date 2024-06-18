@@ -1,5 +1,9 @@
 var escBtn = document.querySelector(".escBtn");
 var addBtn = document.querySelector("button.add");
+var index = localStorage.getItem("index")
+  ? parseInt(localStorage.getItem("index"))
+  : 0;
+
 escBtn.addEventListener("click", function () {
   window.location.href = "./../couponList.html";
 });
@@ -41,8 +45,13 @@ addBtn.addEventListener("click", function (e) {
 //Thêm mới dữ liệu
 var productsAPI = "http://localhost:3000/products";
 function start() {
-  getProducts(renderProducts);
-  handleCreateProducts();
+  getProducts(function (products) {
+    // Cập nhật index dựa trên số lượng sản phẩm hiện có
+    index = products.length;
+    localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
+    renderProducts(products);
+    handleCreateProducts();
+  });
 }
 start();
 function getProducts(callback) {
@@ -83,7 +92,7 @@ function renderProducts(products) {
       <div class="action">
         <i class="fa-solid fa-eye"></i>
         <i class="fa-solid fa-pencil"></i>
-        <i class="fa-solid fa-trash product-${index}"></i>
+           <i class="fa-solid fa-trash" data-id="${product.id}"></i>
       </div>
     </td>
   </tr>
@@ -91,10 +100,12 @@ function renderProducts(products) {
   });
   localStorage.setItem("couponList", JSON.stringify(interface)); //Lưu tại interface trên localStrorage qua couponList
 }
-
 function handleCreateProducts() {
   addBtn.addEventListener("click", function (e) {
+    index++;
+    localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
     e.preventDefault();
+    e.stopPropagation();
     var name = document.querySelector(`input[name="name"]`).value;
     var startDay = document.querySelector(`input[name="startDay"]`).value;
     var endDay = document.querySelector(`input[name="endDay"]`).value;
@@ -106,8 +117,8 @@ function handleCreateProducts() {
     var status = document.querySelector(`select[name="status"]`);
     var selectedIndex = status.selectedIndex;
     var selectedOption = status.options[selectedIndex].value;
-
     var formData = {
+      id: index,
       ma: name,
       thoiGian: `${startDay}-${endDay}`,
       giaTriGiam: discountValue,
@@ -117,7 +128,9 @@ function handleCreateProducts() {
     };
 
     createProducts(formData, function () {
+      getProducts(renderProducts);
       window.location.href = "./../couponList.html";
     });
+    console.log(index);
   });
 }

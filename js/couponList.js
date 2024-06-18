@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
   //     });
   //   });
   // }
+
+  //gọi API
   var productsAPI = "http://localhost:3000/products";
   function start() {
     getProducts(renderProducts);
@@ -77,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="action">
           <i class="fa-solid fa-eye"></i>
           <i class="fa-solid fa-pencil"></i>
-          <i class="fa-solid fa-trash product-${index}"></i>
+         <i class="fa-solid fa-trash" data-id="${product.id}"></i>
         </div>
       </td>
     </tr>
@@ -87,12 +89,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   const tbody = document.querySelector("tbody");
   const saveCounpons = localStorage.getItem("couponList"); // lấy ra saveCoupons trên localStrorage thông qua couponList
+  console.log(saveCounpons);
   tbody.innerHTML = JSON.parse(saveCounpons).join("");
   var trashicons = document.querySelectorAll(`.action i.fa-trash`);
-  trashicons.forEach(function (icon, i) {
+  trashicons.forEach(function (icon) {
     icon.addEventListener("click", function () {
-      var tr = document.querySelector(`tr[class=product-${i}]`);
-      tbody.removeChild(tr);
+      // var tr = document.querySelector(`tr[class=product-${i}]`);
+      // tbody.removeChild(tr);
+      var productId = icon.getAttribute("data-id");
+      console.log(productId);
+      var option = {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      fetch(productsAPI + "/" + productId, option)
+        .then(function (response) {
+          response.json();
+        })
+        .then(function () {
+          getProducts(renderProducts);
+        });
     });
   });
 

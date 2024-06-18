@@ -97,14 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // var tr = document.querySelector(`tr[class=product-${i}]`);
       // tbody.removeChild(tr);
       var productId = icon.getAttribute("data-id");
-      console.log(productId);
+      // console.log(productId);
       var option = {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
         },
       };
-      fetch(productsAPI + "/" + productId, option)
+      fetch(productsAPI + "/" + `${productId}`, option)
         .then(function (response) {
           response.json();
         })
@@ -122,3 +122,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//-------------------------------------------------------------------------------- Cấu hình lại

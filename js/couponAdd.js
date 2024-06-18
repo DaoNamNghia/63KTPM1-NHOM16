@@ -11,36 +11,6 @@ var form = document.querySelector("form");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 });
-//toastBox
-const toastBox = document.querySelector(".toastBox");
-var successMsg = `<i class="fa-solid fa-circle-check"></i> Thêm thành công`;
-var errorMsg = `<i class="fa-solid fa-circle-xmark"></i> Thêm thất bại,vui lòng nhập đủ thông tin`;
-var showToast = function (msg) {
-  let toast = document.createElement("div");
-  toast.classList.add("customToast");
-  toast.innerHTML = msg;
-  toastBox.appendChild(toast);
-  setTimeout(function () {
-    toastBox.removeChild(toast);
-  }, 5000);
-};
-
-//kiểm tra dữ liệu khi bấm nút sửa
-var inputs = document.querySelectorAll(`input[type="text"]`);
-addBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  var check = false;
-  inputs.forEach(function (input) {
-    if (input.value.trim() === "") {
-      check = true;
-    }
-  });
-  if (check) {
-    showToast(errorMsg);
-  } else {
-    showToast(successMsg);
-  }
-});
 
 //Thêm mới dữ liệu
 var productsAPI = "http://localhost:3000/products";
@@ -118,7 +88,7 @@ function handleCreateProducts() {
     var selectedIndex = status.selectedIndex;
     var selectedOption = status.options[selectedIndex].value;
     var formData = {
-      id: index,
+      id: `${index}`,
       ma: name,
       thoiGian: `${startDay}-${endDay}`,
       giaTriGiam: discountValue,
@@ -129,8 +99,42 @@ function handleCreateProducts() {
 
     createProducts(formData, function () {
       getProducts(renderProducts);
-      window.location.href = "./../couponList.html";
+      showToast(successMsg);
+      // setTimeout(function () {
+      //   window.location.href = "./../couponList.html";
+      // }, 5000);
     });
     console.log(index);
   });
 }
+
+//toastBox
+const toastBox = document.querySelector(".toastBox");
+var successMsg = `<i class="fa-solid fa-circle-check"></i> Thêm thành công`;
+var errorMsg = `<i class="fa-solid fa-circle-xmark"></i> Thêm thất bại,vui lòng nhập đủ thông tin`;
+var showToast = function (msg) {
+  let toast = document.createElement("div");
+  toast.classList.add("customToast");
+  toast.innerHTML = msg;
+  toastBox.appendChild(toast);
+  setTimeout(function () {
+    toastBox.removeChild(toast);
+  }, 5000);
+};
+
+//kiểm tra dữ liệu khi bấm nút sửa
+var inputs = document.querySelectorAll(`input[type="text"]`);
+addBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  var check = false;
+  inputs.forEach(function (input) {
+    if (input.value.trim() === "") {
+      check = true;
+    }
+  });
+  if (check) {
+    showToast(errorMsg);
+  } else {
+    showToast(successMsg);
+  }
+});

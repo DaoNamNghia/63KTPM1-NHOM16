@@ -7,11 +7,11 @@ var index = localStorage.getItem("index")
 escBtn.addEventListener("click", function () {
   window.location.href = "./../couponList.html";
 });
-var form = document.querySelector("form");
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  console.log("hello");
-});
+// var form = document.querySelector("form");
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   console.log("hello");
+// });
 
 //Thêm mới dữ liệu
 var productsAPI = "http://localhost:3000/products";
@@ -21,7 +21,7 @@ function start() {
     index = products.length;
     localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
     renderProducts(products);
-    handleCreateProducts();
+    // handleCreateProducts();
   });
 }
 start();
@@ -72,39 +72,49 @@ function renderProducts(products) {
   localStorage.setItem("couponList", JSON.stringify(interface)); //Lưu tại interface trên localStrorage qua couponList
 }
 function handleCreateProducts() {
-  addBtn.addEventListener("click", function (e) {
-    index++;
-    localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
-    e.preventDefault();
-    e.stopPropagation();
-    var name = document.querySelector(`input[name="name"]`).value;
-    var startDay = document.querySelector(`input[name="startDay"]`).value;
-    var endDay = document.querySelector(`input[name="endDay"]`).value;
-    var discountValue = document.querySelector(
-      `input[name="discountValue"]`
-    ).value;
-    var limitUse = document.querySelector(`input[name="limitUse"]`).value;
-    var limitValue = document.querySelector(`input[name="limitValue"]`).value;
-    var status = document.querySelector(`select[name="status"]`);
-    var selectedIndex = status.selectedIndex;
-    var selectedOption = status.options[selectedIndex].value;
-    var formData = {
-      id: `${index}`,
-      ma: name,
-      thoiGian: `${startDay}-${endDay}`,
-      giaTriGiam: discountValue,
-      luotSuDung: limitUse,
-      minUse: limitValue,
-      trangThai: selectedOption,
-    };
+  index++;
+  localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
+  var name = document.querySelector(`input[name="name"]`).value;
+  var startDay = document.querySelector(`input[name="startDay"]`).value;
+  var endDay = document.querySelector(`input[name="endDay"]`).value;
+  var discountValue = document.querySelector(
+    `input[name="discountValue"]`
+  ).value;
+  var limitUse = document.querySelector(`input[name="limitUse"]`).value;
+  var limitValue = document.querySelector(`input[name="limitValue"]`).value;
+  var status = document.querySelector(`select[name="status"]`);
+  var selectedIndex = status.selectedIndex;
+  var selectedOption = status.options[selectedIndex].value;
+  if (
+    !name ||
+    !startDay ||
+    !endDay ||
+    !discountValue ||
+    !limitUse ||
+    !limitValue ||
+    !selectedOption
+  ) {
+    showToast(errorMsg);
+    return;
+  }
+  var formData = {
+    id: `${index}`,
+    ma: name,
+    thoiGian: `${startDay}-${endDay}`,
+    giaTriGiam: discountValue,
+    luotSuDung: limitUse,
+    minUse: limitValue,
+    trangThai: selectedOption,
+  };
 
-    createProducts(formData, function () {
-      getProducts(renderProducts);
-      showToast(successMsg);
+  createProducts(formData, function () {
+    getProducts(renderProducts);
+    showToast(successMsg);
+    setTimeout(function () {
       window.location.href = "./../couponList.html";
-    });
-    console.log(index);
+    }, 2000);
   });
+  console.log(index);
 }
 
 //toastBox
@@ -121,19 +131,9 @@ var showToast = function (msg) {
   }, 5000);
 };
 
-//kiểm tra dữ liệu khi bấm nút sửa
-var inputs = document.querySelectorAll(`input[type="text"]`);
+//thêm dữ liệu khi bấm nút thêm
+
 addBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  var check = false;
-  inputs.forEach(function (input) {
-    if (input.value.trim() === "") {
-      check = true;
-    }
-  });
-  if (check) {
-    showToast(errorMsg);
-  } else {
-    showToast(successMsg);
-  }
+  handleCreateProducts(e);
 });

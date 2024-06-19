@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   });
   // }
 
-  //gọi API
+  // gọi API
   var productsAPI = "http://localhost:3000/products";
   function start() {
     getProducts(renderProducts);

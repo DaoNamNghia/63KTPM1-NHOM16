@@ -17,7 +17,7 @@ var showToast = function (msg) {
   toastBox.appendChild(toast);
   setTimeout(function () {
     toastBox.removeChild(toast);
-  }, 2000);
+  }, 3000);
 };
 
 //kiểm tra dữ liệu khi bấm nút sửa
@@ -130,7 +130,7 @@ function handleUpdateProducts() {
       showToast(successMsg);
       setTimeout(function () {
         window.location.href = "./../couponList.html";
-      }, 9000);
+      }, 3000);
     });
     console.log(index);
   });

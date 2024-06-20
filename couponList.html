@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CouponList</title>
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- <div class="noti">
+      <div class="noti-content">
+        <div class="noti-title">Thông báo xác nhận</div>
+        <div class="noti-ask">Bạn có chắc chắn xóa không ?</div>
+        <div class="btn-wrapper">
+          <button class="yes"><span>Có</span></button>
+          <button class="no">Không</button>
+        </div>
+      </div>
+    </div> -->
+    <div id="header"></div>
+    <main class="couponList">
+      <div class="title-wrapper">
+        <div class="content">Quản lý coupon: Danh sách coupon</div>
+        <div class="action">
+          <div class="addBtn">Thêm mới</div>
+        </div>
+      </div>
+      <!-- end title-wrapper -->
+      <div class="table-wrapper">
+        <table class="table custom-table my-table" width="100%">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Mã</th>
+              <th scope="col">Thời gian</th>
+              <th scope="col">Giá trị giảm</th>
+              <th scope="col">Lượt sử dụng</th>
+              <th scope="col">Giá trị đơn hàng tối thiểu</th>
+              <th scope="col">Trạng thái</th>
+              <th scope="col">Tác vụ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <th scope="row"><input type="radio" name="option" /></th>
+              <td>hngo123</td>
+              <td>27/3/2024-28/3/2024</td>
+              <td>10%</td>
+              <td>1</td>
+              <td>300.000đ</td>
+              <td>Hoạt động</td>
+              <td>
+                <div class="action">
+                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-pencil"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </td>
+            </tr>
+
+             -->
+            <!-- tự render giao diện -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <div id="footer"></div>
+    <script src="./js/loadComponents.js"></script>
+    <script src="./js/couponList.js"></script>
+  </body>
+</html>

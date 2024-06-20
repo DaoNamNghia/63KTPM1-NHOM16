@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   addBtn.addEventListener("click", function (e) {
     e.preventDefault();
     window.location.href = "./../couponAdd.html";
+    console.log("chuyển hướng");
   });
 
   // hiển thị dữ liệu từ trường nhập vào bảng

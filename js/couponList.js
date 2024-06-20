@@ -106,9 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(function (response) {
         return response.json();
       })
-      .then(function () {
-        getProducts(renderProducts);
-      });
+      .then(function () {});
+    getProducts(renderProducts);
   }
 
   var trashicons = document.querySelectorAll(`.action i.fa-trash`);

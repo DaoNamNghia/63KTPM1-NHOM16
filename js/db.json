@@ -29,26 +29,17 @@
   "products": [
     {
       "id": "2",
-      "ma": "aaaa",
-      "thoiGian": "2024-06-27-2024-06-13",
-      "giaTriGiam": "a",
-      "luotSuDung": "a",
-      "minUse": "a",
-      "trangThai": "3"
-    },
-    {
-      "id": "2",
       "ma": "a",
-      "thoiGian": "2024-06-20-2024-06-17",
+      "thoiGian": "2024-06-06-2024-06-11",
       "giaTriGiam": "a",
       "luotSuDung": "a",
       "minUse": "a",
       "trangThai": "2"
     },
     {
-      "id": "3",
+      "id": "2",
       "ma": "a",
-      "thoiGian": "2024-06-20-2024-06-17",
+      "thoiGian": "2024-06-28-2024-06-04",
       "giaTriGiam": "a",
       "luotSuDung": "a",
       "minUse": "a",

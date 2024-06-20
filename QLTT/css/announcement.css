@@ -1,0 +1,380 @@
+.gi-hng {
+  width: 85px;
+  position: relative;
+  line-height: 21.9px;
+  font-weight: 300;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.quantity-icon {
+  width: 2.7px;
+  height: 3px;
+  position: relative;
+}
+.quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 8.1px var(--padding-5xs) 0 0;
+  margin-left: -1.4px;
+}
+.chi-tit-thanh {
+  position: relative;
+  line-height: 150%;
+  font-weight: 300;
+}
+.payment-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs-4) var(--padding-5xs) 0 0;
+  margin-left: -1.4px;
+}
+.complete-order-icon {
+  width: 2.7px;
+  height: 3px;
+  position: relative;
+}
+.payment-icon {
+  width: 12.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 7.8px var(--padding-4xs) 0 0;
+  box-sizing: border-box;
+  margin-left: -1.4px;
+}
+.hon-thnh {
+  align-self: stretch;
+  position: relative;
+  line-height: 150%;
+  font-weight: 300;
+  display: inline-block;
+  min-width: 86px;
+}
+.complete-button,
+.product-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.complete-button {
+  width: 86px;
+  flex-direction: column;
+  padding: 1.6px 0 0;
+  box-sizing: border-box;
+  margin-left: -1.4px;
+}
+.product-card {
+  flex-direction: row;
+  max-width: 100%;
+  row-gap: 20px;
+}
+.removed-item-icon {
+  height: 12.4px;
+  width: 16.5px;
+  position: relative;
+}
+.o-thun-newseven,
+.span {
+  font-family: var(--font-inter);
+}
+.span {
+  font-weight: 300;
+  color: var(--color-black);
+}
+.o-thun-newseven {
+  font-weight: 600;
+  color: #43a647;
+}
+.span1 {
+  font-weight: 300;
+}
+.khi-phc2 {
+  text-decoration: underline;
+}
+.khi-phc1 {
+  font-weight: 300;
+}
+.khi-phc {
+  color: inherit;
+}
+.cha-c-sn,
+.o-thun-newseven-container {
+  position: relative;
+  line-height: 39px;
+  flex-shrink: 0;
+  debug_commit: 448091;
+}
+.cha-c-sn {
+  width: 227.2px;
+  line-height: 19.3px;
+  font-weight: 300;
+  color: var(--color-black);
+  text-align: center;
+  display: inline-block;
+  text-shadow: 0.3px 0 0#000, 0 0.3px 0#000, -0.3px 0 0#000, 0-0.3px 0#000;
+}
+.removed-item-details,
+.removed-item-message {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.removed-item-message {
+  flex-direction: column;
+  gap: var(--gap-3xs);
+  max-width: calc(100% - 25px);
+}
+.removed-item-details {
+  flex-direction: row;
+  gap: 8.9px;
+  max-width: 100%;
+}
+.product-card-parent,
+.removed-item-details-wrapper {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.removed-item-details-wrapper {
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  color: var(--color-red);
+}
+.product-card-parent {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 43.3px;
+}
+.frame-child {
+  height: 50.9px;
+  width: 227.3px;
+  position: relative;
+  background-color: var(--color-black);
+  display: none;
+}
+.quay-tr-li {
+  position: relative;
+  line-height: 20px;
+  font-weight: 800;
+  white-space: pre-wrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.rectangle-parent {
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-8xl) 14.9px 32px;
+  white-space: nowrap;
+}
+.root,
+.root-inner {
+  display: flex;
+  box-sizing: border-box;
+}
+.root-inner {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 49px;
+  max-width: 100%;
+  color: var(--color-gainsboro-100);
+}
+.root {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 265px 578px 511.9px 249px;
+  gap: 62.7px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: var(--font-size-smi-7);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 725px) {
+  .root {
+    gap: var(--gap-12xl);
+    padding-left: 124px;
+    padding-right: 289px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .product-card-parent {
+    gap: var(--gap-3xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .product-card {
+    flex-wrap: wrap;
+  }
+  .root,
+  .root-inner {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .root {
+    gap: var(--gap-base);
+  }
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-inder: Inder;
+
+  /* font sizes */
+  --font-size-smi-7: 12.7px;
+  --font-size-6xl-4: 25.4px;
+  --font-size-xl: 20px;
+  --font-size-7xl: 26px;
+  --font-size-8xl-1: 27.1px;
+  --font-size-2xl: 21px;
+  --font-size-lg-9: 18.9px;
+  --font-size-4xl-8: 23.8px;
+  --font-size-mid-7: 17.7px;
+  --font-size-sm-8: 13.8px;
+  --font-size-4xl-5: 23.5px;
+  --font-size-lgi: 19px;
+  --font-size-mid-8: 17.8px;
+  --font-size-base-2: 16.2px;
+  --font-size-2xs-3: 10.3px;
+  --font-size-mini-7: 14.7px;
+  --font-size-2xl-2: 21.2px;
+  --font-size-mid: 17px;
+  --font-size-base: 16px;
+  --font-size-smi: 13px;
+  --font-size-2xl-6: 21.6px;
+  --font-size-base-9: 16.9px;
+  --font-size-lgi-1: 19.1px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gainsboro-100: #d9d9d9;
+  --color-gainsboro: rgba(217, 217, 217, 0.53);
+  --color-red: #f52020;
+  --color-gray-100: #828282;
+  --color-gray-200: #1c1c1c;
+  --color-gray-300: #151414;
+
+  /* Gaps */
+  --gap-base: 16px;
+  --gap-12xl: 31px;
+  --gap-3xl: 22px;
+  --gap-3xs: 10px;
+  --gap-mid: 17px;
+  --gap-mini: 15px;
+  --gap-xl: 20px;
+  --gap-6xl: 25px;
+  --gap-11xl: 30px;
+  --gap-lg: 18px;
+  --gap-24xl-6: 43.6px;
+  --gap-8xl: 27px;
+  --gap-7xs-5: 5.5px;
+  --gap-9xl: 28px;
+  --gap-mid-4: 17.4px;
+  --gap-15xl-8: 34.8px;
+  --gap-9xl-9: 28.9px;
+  --gap-12xs-9: 0.9px;
+  --gap-2xs-5: 10.5px;
+  --gap-3xs-3: 9.3px;
+  --gap-smi-6: 12.6px;
+  --gap-lgi: 19px;
+  --gap-19xl: 38px;
+  --gap-10xs: 3px;
+  --gap-lgi-8: 19.8px;
+  --gap-smi: 13px;
+  --gap-2xs: 11px;
+  --gap-16xl: 35px;
+  --gap-smi-5: 12.5px;
+
+  /* Paddings */
+  --padding-xl: 20px;
+  --padding-base: 16px;
+  --padding-8xl: 27px;
+  --padding-4xs: 9px;
+  --padding-11xs-4: 1.4px;
+  --padding-5xs: 8px;
+  --padding-84xl: 103px;
+  --padding-6xl: 25px;
+  --padding-43xl-2: 62.2px;
+  --padding-21xl: 40px;
+  --padding-3xl: 22px;
+  --padding-8xs: 5px;
+  --padding-28xl: 47px;
+  --padding-29xl: 48px;
+  --padding-42xl: 61px;
+  --padding-43xl: 62px;
+  --padding-smi-8: 12.8px;
+  --padding-smi-7: 12.7px;
+  --padding-lgi: 19px;
+  --padding-mini: 15px;
+  --padding-6xs: 7px;
+  --padding-10xs: 3px;
+  --padding-11xs: 2px;
+  --padding-14xl: 33px;
+  --padding-38xl-1: 57.1px;
+  --padding-290xl: 309px;
+  --padding-135xl: 154px;
+  --padding-4xl: 23px;
+  --padding-4xs-4: 8.4px;
+  --padding-xs: 12px;
+  --padding-2xs: 11px;
+  --padding-11xl-3: 30.3px;
+  --padding-7xs-9: 5.9px;
+  --padding-2xs-7: 10.7px;
+  --padding-55xl: 74px;
+  --padding-11xl: 30px;
+  --padding-sm: 14px;
+  --padding-80xl: 99px;
+  --padding-7xs-2: 5.2px;
+  --padding-27xl: 46px;
+  --padding-8xs-5: 4.5px;
+  --padding-10xs-3: 2.3px;
+  --padding-5xl: 24px;
+  --padding-3xs: 10px;
+  --padding-7xl: 26px;
+  --padding-6xs-4: 6.4px;
+  --padding-12xs: 1px;
+  --padding-9xs: 4px;
+  --padding-10xl-1: 29.1px;
+  --padding-18xl: 37px;
+  --padding-16xl: 35px;
+  --padding-mid: 17px;
+  --padding-8xs-6: 4.6px;
+  --padding-7xs-4: 5.4px;
+  --padding-48xl: 67px;
+  --padding-47xl: 66px;
+  --padding-15xl: 34px;
+  --padding-20xl: 39px;
+  --padding-7xs: 6px;
+  --padding-17xl: 36px;
+  --padding-11xs-7: 1.7px;
+  --padding-12xs-4: 0.4px;
+  --padding-2xl: 21px;
+  --padding-6xs-5: 6.5px;
+  --padding-xs-8: 11.8px;
+
+  /* Border radiuses */
+  --br-8xs-3: 4.3px;
+  --br-30xl: 49px;
+  --br-10xl-3: 29.3px;
+}

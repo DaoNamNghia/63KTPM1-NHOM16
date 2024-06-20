@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var updateiconId = updateicon.getAttribute("data-id");
       console.log(updateiconId);
       localStorage.setItem("updateId", updateiconId);
-      window.location.href = "./../couponUpdate.html";
+      window.location.href = "couponUpdate.html";
     });
   });
 });

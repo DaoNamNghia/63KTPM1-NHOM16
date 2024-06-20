@@ -108,7 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(function () {
-        getProducts(renderProducts);
+        // getProducts(renderProducts);
+        var deleteItem = document.querySelector(`tr.product-${productId}`);
+        tbody.removeChild(deleteItem);
       });
   }
   var trashicons = document.querySelectorAll(`.action i.fa-trash`);

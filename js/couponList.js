@@ -95,7 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const saveCounpons = localStorage.getItem("couponList"); // lấy ra saveCoupons trên localStrorage thông qua couponList
   tbody.innerHTML = JSON.parse(saveCounpons).join("");
 
-  function handleDelete(productId) {
+  //hàm xóa
+  function handleDeleteProducts(productId) {
     var option = {
       method: "DELETE",
       headers: {
@@ -106,10 +107,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(function (response) {
         return response.json();
       })
-      .then(function () {});
-    getProducts(renderProducts);
+      .then(function () {
+        getProducts(renderProducts);
+      });
   }
-
   var trashicons = document.querySelectorAll(`.action i.fa-trash`);
   trashicons.forEach(function (icon) {
     icon.addEventListener("click", function (e) {
@@ -117,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
       e.stopPropagation();
       var productId = icon.getAttribute("data-id");
       console.log(productId);
-
       var header = document.querySelector("#header");
       var body = document.querySelector("body");
       var noti = document.createElement("div");
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="noti-title">Thông báo xác nhận</div>
         <div class="noti-ask">Bạn có chắc chắn xóa không ?</div>
         <div class="btn-wrapper">
-          <button class="yes" onclick="handleDelete()"><span>Có</span></button>
+          <button class="yes"><span>Có</span></button>
           <button class="no">Không</button>
         </div>
       </div>
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       body.insertBefore(noti, header);
 
       noti.querySelector(".yes").addEventListener("click", function () {
-        handleDelete(productId);
+        handleDeleteProducts(productId);
         body.removeChild(noti);
       });
       noti.querySelector(".no").addEventListener("click", function () {

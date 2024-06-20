@@ -5,7 +5,7 @@ var index = localStorage.getItem("index")
   : 0;
 
 escBtn.addEventListener("click", function () {
-  window.location.href = "couponList.html";
+  window.location.href = "./couponList.html";
 });
 // var form = document.querySelector("form");
 // form.addEventListener("submit", function (e) {

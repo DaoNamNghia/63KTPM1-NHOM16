@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to Homepage</title>
+    <script>
+        // Hàm để điều hướng tới trang homepage
+        function redirectToHomepage() {
+            // URL của trang homepage
+            var homepageUrl = "homePage.html";
+            // Điều hướng tới trang homepage
+            window.location.href = homepageUrl;
+        }
+
+        // Gọi hàm điều hướng khi trang được tải
+        window.onload = redirectToHomepage;
+    </script>
+</head>
+<body>
+    <p>Đang chuyển hướng tới trang chủ...</p>
+</body>
+</html>

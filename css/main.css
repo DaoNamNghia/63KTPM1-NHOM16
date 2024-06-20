@@ -4,6 +4,35 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+body .noti {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .noti .noti-content {
+  width: 350px;
+  height: 250px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body .noti .noti-content .noti-ask {
+  margin: 2rem auto;
+}
+body .noti .noti-content .btn-wrapper button {
+  width: 7rem;
+  height: 3rem;
+}
+body .noti .noti-content .btn-wrapper .yes {
+  background-color: #f52020;
+  opacity: 0.69;
+}
 /* header */
 #header {
   display: flex;

@@ -25,17 +25,18 @@ var inputs = document.querySelectorAll(`input`);
 
 updateBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  var check = false;
-  inputs.forEach(function (input) {
-    if (input.value.trim() === "") {
-      check = true;
-    }
-  });
-  if (check) {
-    showToast(errorMsg);
-  } else {
-    showToast(successMsg);
-  }
+  // var check = false;
+  // inputs.forEach(function (input) {
+  //   if (input.value.trim() === "") {
+  //     check = true;
+  //   }
+  // });
+  // if (check) {
+  //   showToast(errorMsg);
+  // } else {
+  //   showToast(successMsg);
+  // }
+  handleUpdateProducts(e);
 });
 
 // sửa dữ liệu
@@ -46,7 +47,7 @@ function start() {
     index = products.length;
     localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
     renderProducts(products);
-    handleUpdateProducts();
+    // handleUpdateProducts();
   });
 }
 start();
@@ -93,45 +94,58 @@ function renderProducts(products) {
            <i class="fa-solid fa-trash" data-id="${product.id}"></i>
       </div>
     </td>
+
   </tr>
     `;
   });
   localStorage.setItem("couponList", JSON.stringify(interface)); //Lưu tại interface trên localStrorage qua couponList
 }
-function handleUpdateProducts() {
-  updateBtn.addEventListener("click", function (e) {
-    index++;
-    localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
-    e.preventDefault();
-    e.stopPropagation();
-    var name = document.querySelector(`input[name="name"]`).value;
-    var startDay = document.querySelector(`input[name="startDay"]`).value;
-    var endDay = document.querySelector(`input[name="endDay"]`).value;
-    var discountValue = document.querySelector(
-      `input[name="discountValue"]`
-    ).value;
-    var limitUse = document.querySelector(`input[name="limitUse"]`).value;
-    var limitValue = document.querySelector(`input[name="limitValue"]`).value;
-    var status = document.querySelector(`select[name="status"]`);
-    var selectedIndex = status.selectedIndex;
-    var selectedOption = status.options[selectedIndex].value;
-    var formData = {
-      id: `${index}`,
-      ma: name,
-      thoiGian: `${startDay}-${endDay}`,
-      giaTriGiam: discountValue,
-      luotSuDung: limitUse,
-      minUse: limitValue,
-      trangThai: selectedOption,
-    };
+function handleUpdateProducts(e) {
+  index++;
+  localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
+  e.preventDefault();
+  e.stopPropagation();
+  var name = document.querySelector(`input[name="name"]`).value;
+  var startDay = document.querySelector(`input[name="startDay"]`).value;
+  var endDay = document.querySelector(`input[name="endDay"]`).value;
+  var discountValue = document.querySelector(
+    `input[name="discountValue"]`
+  ).value;
+  var limitUse = document.querySelector(`input[name="limitUse"]`).value;
+  var limitValue = document.querySelector(`input[name="limitValue"]`).value;
+  var status = document.querySelector(`select[name="status"]`);
+  var selectedIndex = status.selectedIndex;
+  var selectedOption = status.options[selectedIndex].value;
 
-    updateProducts(formData, function () {
-      getProducts(renderProducts);
-      showToast(successMsg);
-      setTimeout(function () {
-        window.location.href = "./../couponList.html";
-      }, 3000);
-    });
-    console.log(index);
+  if (
+    !name ||
+    !startDay ||
+    !endDay ||
+    !discountValue ||
+    !limitUse ||
+    !limitValue ||
+    !selectedOption
+  ) {
+    showToast(errorMsg);
+    return;
+  }
+
+  var formData = {
+    id: `${index}`,
+    ma: name,
+    thoiGian: `${startDay}-${endDay}`,
+    giaTriGiam: discountValue,
+    luotSuDung: limitUse,
+    minUse: limitValue,
+    trangThai: selectedOption,
+  };
+
+  updateProducts(formData, function () {
+    getProducts(renderProducts);
+    showToast(successMsg);
+    setTimeout(function () {
+      window.location.href = "./../couponList.html";
+    }, 3000);
   });
+  console.log(index);
 }

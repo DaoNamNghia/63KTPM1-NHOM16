@@ -28,13 +28,22 @@
   },
   "products": [
     {
-      "id": "2",
-      "ma": "Nguyễn Đức Minh",
-      "thoiGian": "2024-06-20-2024-06-16",
+      "id": "1",
+      "ma": "a",
+      "thoiGian": "2024-06-20-2024-06-11",
+      "giaTriGiam": "a",
+      "luotSuDung": "a",
+      "minUse": "s",
+      "trangThai": "3"
+    },
+    {
+      "id": "3",
+      "ma": "minh",
+      "thoiGian": "2024-06-12-2024-06-12",
       "giaTriGiam": "a",
       "luotSuDung": "a",
       "minUse": "a",
-      "trangThai": "1"
+      "trangThai": "3"
     }
   ]
 }

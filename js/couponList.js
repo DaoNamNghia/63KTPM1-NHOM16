@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       noti.querySelector(".yes").addEventListener("click", function () {
         var deleteItem = document.querySelector(`tr.product-${productId}`);
-        tbody.removeChild(deleteItem);
+        deleteItem.remove();
         handleDeleteProducts(productId);
         body.removeChild(noti);
       });

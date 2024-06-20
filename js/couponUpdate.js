@@ -80,7 +80,7 @@ function updateProducts(data, callback) {
 function renderProducts(products) {
   var interface = products.map(function (product, index) {
     return `
-    <tr class="product-${index}">
+    <tr class="product-${products.id}">
     <th scope="row"><input type="radio" name="option" /></th>
     <td>${product.ma}</td>
     <td>${product.thoiGian}</td>

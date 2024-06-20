@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </tr>
       `;
     });
-
+    console.log("render lại");
     localStorage.setItem("couponList", JSON.stringify(interface)); //Lưu tại interface trên localStrorage qua couponList
   }
   const tbody = document.querySelector("tbody");

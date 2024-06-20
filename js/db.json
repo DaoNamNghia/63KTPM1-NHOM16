@@ -26,5 +26,15 @@
   "profile": {
     "name": "typicode"
   },
-  "products": []
+  "products": [
+    {
+      "id": "1",
+      "ma": "s",
+      "thoiGian": "2024-06-20-2024-06-19",
+      "giaTriGiam": "s",
+      "luotSuDung": "s",
+      "minUse": "s",
+      "trangThai": "2"
+    }
+  ]
 }

@@ -4,6 +4,7 @@ var form = document.querySelector("form");
 
 escBtn.addEventListener("click", function () {
   window.location.href = "./../couponList.html";
+  console.log("chuyển hướng");
 });
 
 //toastBox

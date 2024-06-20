@@ -26,5 +26,15 @@
   "profile": {
     "name": "typicode"
   },
-  "products": []
+  "products": [
+    {
+      "id": "2",
+      "ma": "Nguyễn Đức Minh",
+      "thoiGian": "2024-06-20-2024-06-16",
+      "giaTriGiam": "a",
+      "luotSuDung": "a",
+      "minUse": "a",
+      "trangThai": "1"
+    }
+  ]
 }

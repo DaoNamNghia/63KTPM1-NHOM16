@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   addBtn.addEventListener("click", function (e) {
     e.preventDefault();
     window.location.href = "./../couponAdd.html";
+    console.log("chuyển hướng");
   });
 
   // hiển thị dữ liệu từ trường nhập vào bảng
@@ -86,14 +87,15 @@ document.addEventListener("DOMContentLoaded", function () {
     </tr>
       `;
     });
-
+    console.log("render lại");
     localStorage.setItem("couponList", JSON.stringify(interface)); //Lưu tại interface trên localStrorage qua couponList
   }
   const tbody = document.querySelector("tbody");
   const saveCounpons = localStorage.getItem("couponList"); // lấy ra saveCoupons trên localStrorage thông qua couponList
   tbody.innerHTML = JSON.parse(saveCounpons).join("");
 
-  function handleDelete(productId) {
+  //hàm xóa
+  function handleDeleteProducts(productId) {
     var option = {
       method: "DELETE",
       headers: {
@@ -108,7 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
         getProducts(renderProducts);
       });
   }
-
   var trashicons = document.querySelectorAll(`.action i.fa-trash`);
   trashicons.forEach(function (icon) {
     icon.addEventListener("click", function (e) {
@@ -116,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
       e.stopPropagation();
       var productId = icon.getAttribute("data-id");
       console.log(productId);
-
       var header = document.querySelector("#header");
       var body = document.querySelector("body");
       var noti = document.createElement("div");
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="noti-title">Thông báo xác nhận</div>
         <div class="noti-ask">Bạn có chắc chắn xóa không ?</div>
         <div class="btn-wrapper">
-          <button class="yes" onclick="handleDelete()"><span>Có</span></button>
+          <button class="yes"><span>Có</span></button>
           <button class="no">Không</button>
         </div>
       </div>
@@ -134,7 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
       body.insertBefore(noti, header);
 
       noti.querySelector(".yes").addEventListener("click", function () {
-        handleDelete(productId);
+        handleDeleteProducts(productId); //xóa trong db.json
+        var deleteItem = document.querySelector(`tr.product-${productId}`);
+        tbody.removeChild(deleteItem); //xóa trên giao diện
         body.removeChild(noti);
       });
       noti.querySelector(".no").addEventListener("click", function () {
@@ -150,7 +152,8 @@ document.addEventListener("DOMContentLoaded", function () {
       var updateiconId = updateicon.getAttribute("data-id");
       console.log(updateiconId);
       localStorage.setItem("updateId", updateiconId);
-      window.location.href = "./../couponUpdate.html";
+      window.location.href =
+        "https://daonamnghia.github.io/63KTPM1-NHOM16/couponUpdate.html";
     });
   });
 });

@@ -1,0 +1,763 @@
+.ng-nhp {
+    position: relative;
+    font-size: var(--font-size-4xl-4);
+    line-height: 37.5px;
+    font-weight: 500;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+  }
+  .tn-ti-khon {
+    margin: 0;
+  }
+  .tn-ti-khon-container {
+    height: 34.7px;
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-base-1);
+    line-height: 150%;
+    display: inline-block;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+    max-width: 100%;
+  }
+  .adn {
+    height: 10.1px;
+    width: 10.1px;
+    position: relative;
+    background-color: var(--color-gray-400);
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+  }
+  .account-input-inner-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370.8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .accusoft,
+  .acquisitions-incorporated {
+    position: absolute;
+    background-color: var(--color-gray-400);
+    overflow: hidden;
+  }
+  .accusoft {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .acquisitions-incorporated {
+    top: 32.5px;
+    left: 9.9px;
+    width: 10.1px;
+    height: 10.1px;
+    z-index: 1;
+  }
+  .remember-me-wrapper {
+    width: 370.8px;
+    height: 42.6px;
+    position: relative;
+    max-width: 100%;
+  }
+  .admin {
+    width: 193.9px;
+    border: 0;
+    outline: 0;
+    font-family: var(--font-inter);
+    font-size: var(--font-size-xl-2);
+    background-color: transparent;
+    height: 31px;
+    position: relative;
+    line-height: 150%;
+    color: var(--color-black);
+    text-align: left;
+    display: inline-block;
+    padding: 0;
+  }
+  .input-field,
+  .ng-nhp-parent {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .input-field {
+    box-shadow: 0 0.4px 0.81px rgba(0, 0, 0, 0.05);
+    border-radius: 3.22px;
+    background-color: var(--color-white);
+    border: 0.4px solid var(--color-gray-100);
+    flex-direction: row;
+    padding: var(--padding-3xs) var(--padding-mid) var(--padding-8xs);
+  }
+  .ng-nhp-parent {
+    flex-direction: column;
+    gap: 8.7px;
+    max-width: 100%;
+  }
+  .mt-khu,
+  .mt-khu1 {
+    height: 34.7px;
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-base-1);
+    line-height: 150%;
+    display: inline-block;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+    max-width: 100%;
+  }
+  .mt-khu1 {
+    z-index: 1;
+    margin-left: -370.8px;
+  }
+  .password-input-wrapper,
+  .password-input-wrapper1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .password-input-wrapper1 {
+    flex: 1;
+  }
+  .password-input-wrapper {
+    width: 383.7px;
+    padding: 0 var(--padding-7xs);
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  .check {
+    height: 6.4px;
+    width: 5.6px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+  }
+  .empty-placeholder {
+    width: 124.5px;
+    border: 0;
+    outline: 0;
+    font-family: var(--font-inter);
+    font-size: var(--font-size-xl-2);
+    background-color: transparent;
+    height: 37.1px;
+    position: relative;
+    line-height: 150%;
+    color: var(--color-black);
+    text-align: left;
+    display: inline-block;
+    padding: 0;
+  }
+  .angle-down {
+    height: 6.4px;
+    width: 5.6px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+  }
+  .input-field1,
+  .password-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .input-field1 {
+    flex: 1;
+    box-shadow: 0 0.4px 0.81px rgba(0, 0, 0, 0.05);
+    border-radius: 3.22px;
+    background-color: var(--color-white);
+    border: 0.4px solid var(--color-gray-100);
+    padding: var(--padding-9xs) var(--padding-mini) var(--padding-7xs);
+    gap: 3.2px;
+    z-index: 1;
+  }
+  .password-input-container {
+    align-self: stretch;
+    padding: 0 0 0 var(--padding-7xs);
+  }
+  .remember-me-inner-wrapper {
+    margin: 0;
+    height: 17.7px;
+    width: 12.1px;
+  }
+  .ghi-nh-mt {
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-base-1);
+    line-height: 150%;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+  }
+  .remember-me-wrapper-wrapper,
+  .remember-me-wrapper1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .remember-me-wrapper1 {
+    flex: 1;
+    gap: var(--gap-7xs);
+  }
+  .remember-me-wrapper-wrapper {
+    width: 172.5px;
+    padding: 0 var(--padding-11xs) var(--padding-8xs-8);
+    box-sizing: border-box;
+  }
+  .ng-nhp2 {
+    margin: 0;
+  }
+  .ng-nhp1 {
+    position: relative;
+    font-size: var(--font-size-base-1);
+    line-height: 19.3px;
+    font-weight: 800;
+    font-family: var(--font-inter);
+    color: var(--color-white);
+    text-align: left;
+  }
+  .button {
+    box-shadow: 0 0.4px 0.81px rgba(0, 0, 0, 0.05);
+    border-radius: 3.22px;
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-smi-7) 28px;
+    flex-shrink: 0;
+  }
+  .qun-mt-khu {
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-base-1);
+    line-height: 25px;
+    font-weight: 300;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+    flex-shrink: 0;
+  }
+  .login-buttons,
+  .qun-mt-khu-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .qun-mt-khu-wrapper {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 var(--padding-5xs);
+  }
+  .login-buttons {
+    width: 157.6px;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .password-input-container-parent {
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 16.5px;
+  }
+  .account-input-container,
+  .frame-parent,
+  .password-input-container-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .account-input-container {
+    align-self: stretch;
+    align-items: flex-start;
+    gap: 16.1px;
+  }
+  .frame-parent {
+    flex: 1;
+    align-items: flex-end;
+    gap: 41.5px;
+    min-width: 272px;
+  }
+  .check1 {
+    height: 6.4px;
+    width: 5.6px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .input-field2 {
+    height: 48.8px;
+    width: 411.1px;
+    box-shadow: 0 0.4px 0.81px rgba(0, 0, 0, 0.05);
+    border-radius: 3.22px;
+    background-color: var(--color-white);
+    border: 0.4px solid var(--color-gray-100);
+    box-sizing: border-box;
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-8xs-8) var(--padding-7xs);
+    max-width: 100%;
+  }
+  .divider {
+    width: 0.4px;
+    flex: 1;
+    position: relative;
+    border-right: 0.4px solid var(--color-black);
+    box-sizing: border-box;
+  }
+  .divider-wrapper {
+    height: 488.1px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 18.5px 0 0;
+    box-sizing: border-box;
+  }
+  .check2 {
+    height: 6.4px;
+    width: 5.6px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+  }
+  .ng-k1 {
+    margin: 0;
+  }
+  .ng-k,
+  .s-in-thoi {
+    position: relative;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+  }
+  .ng-k {
+    width: 145.5px;
+    font-size: var(--font-size-4xl-4);
+    line-height: 150%;
+    font-weight: 500;
+    display: inline-block;
+  }
+  .s-in-thoi {
+    align-self: stretch;
+    font-size: var(--font-size-base-1);
+    line-height: 25px;
+  }
+  .phone-number-field {
+    width: 370.8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 7.6px;
+    flex-shrink: 0;
+    max-width: 100%;
+  }
+  .input-field3 {
+    border: 0.4px solid var(--color-gray-100);
+    outline: 0;
+    background-color: var(--color-white);
+    align-self: stretch;
+    height: 48.8px;
+    box-shadow: 0 0.4px 0.81px rgba(0, 0, 0, 0.05);
+    border-radius: 3.22px;
+    box-sizing: border-box;
+    min-width: 247px;
+    flex-shrink: 0;
+  }
+  .signup-fields {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 27.4px;
+    max-width: 100%;
+  }
+  .a-ch-email {
+    width: 370.8px;
+    position: relative;
+    font-size: var(--font-size-base-1);
+    line-height: 25px;
+    display: inline-block;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+    flex-shrink: 0;
+    max-width: 100%;
+  }
+  .email-field,
+  .input-field4 {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .input-field4 {
+    border: 0.4px solid var(--color-gray-100);
+    outline: 0;
+    background-color: var(--color-white);
+    height: 48.8px;
+    box-shadow: 0 0.4px 0.81px rgba(0, 0, 0, 0.05);
+    border-radius: 3.22px;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: var(--padding-8xs-8) var(--padding-7xs);
+    min-width: 247px;
+    flex-shrink: 0;
+  }
+  .email-field {
+    flex-direction: column;
+    gap: var(--gap-6xl-8);
+    max-width: 100%;
+  }
+  .mt-khu2 {
+    width: 370.8px;
+    position: relative;
+    font-size: var(--font-size-base-1);
+    line-height: 25px;
+    display: inline-block;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+    max-width: 100%;
+  }
+  .input-field5 {
+    border: 0.4px solid var(--color-gray-100);
+    outline: 0;
+    background-color: var(--color-white);
+    align-self: stretch;
+    height: 48.8px;
+    box-shadow: 0 0.4px 0.81px rgba(0, 0, 0, 0.05);
+    border-radius: 3.22px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-8xs-8) var(--padding-7xs);
+    min-width: 247px;
+    flex-shrink: 0;
+  }
+  .ng-k2 {
+    position: relative;
+    font-size: var(--font-size-base-1);
+    line-height: 25px;
+    font-weight: 800;
+    font-family: var(--font-inter);
+    color: var(--color-white);
+    text-align: left;
+    display: inline-block;
+    min-width: 80.2px;
+    z-index: 1;
+  }
+  .button1 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-smi-7) 38px var(--padding-6xs);
+    background-color: var(--color-black);
+    box-shadow: 0 0.4px 0.81px rgba(0, 0, 0, 0.05);
+    border-radius: 3.22px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .button1:hover {
+    background-color: #333;
+  }
+  .input-field-parent,
+  .mt-khu-parent {
+    align-self: stretch;
+    flex-direction: column;
+  }
+  .input-field-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20.9px;
+  }
+  .mt-khu-parent {
+    gap: var(--gap-6xl-8);
+    max-width: 100%;
+  }
+  .mt-khu-parent,
+  .root,
+  .signup-fields-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .signup-fields-parent {
+    flex: 1;
+    flex-direction: column;
+    gap: 40.9px;
+    min-width: 267px;
+    max-width: 100%;
+  }
+  .root {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 266px 256px 266.3px 302px;
+    box-sizing: border-box;
+    gap: var(--gap-7xl);
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 725px) {
+    .root {
+      padding-left: 151px;
+      padding-right: var(--padding-109xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .ng-nhp {
+      font-size: var(--font-size-lgi);
+      line-height: 28px;
+    }
+    .admin,
+    .empty-placeholder {
+      font-size: var(--font-size-base);
+      line-height: 24px;
+    }
+    .frame-parent {
+      gap: var(--gap-2xl);
+    }
+    .ng-k {
+      font-size: var(--font-size-lgi);
+      line-height: 28px;
+    }
+    .signup-fields-parent {
+      gap: var(--gap-xl);
+    }
+    .root {
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+  }
+  body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-inter: Inter;
+    --font-inder: Inder;
+  
+    /* font sizes */
+    --font-size-base-1: 16.1px;
+    --font-size-4xl-4: 23.4px;
+    --font-size-lgi: 19px;
+    --font-size-xl-2: 20.2px;
+    --font-size-base: 16px;
+    --font-size-6xl-4: 25.4px;
+    --font-size-xl: 20px;
+    --font-size-7xl: 26px;
+    --font-size-8xl-1: 27.1px;
+    --font-size-2xl: 21px;
+    --font-size-lg-9: 18.9px;
+    --font-size-4xl-8: 23.8px;
+    --font-size-mid-7: 17.7px;
+    --font-size-sm-8: 13.8px;
+    --font-size-4xl-5: 23.5px;
+    --font-size-mid-8: 17.8px;
+    --font-size-base-2: 16.2px;
+    --font-size-2xs-3: 10.3px;
+    --font-size-mini-7: 14.7px;
+    --font-size-2xl-2: 21.2px;
+    --font-size-mid: 17px;
+    --font-size-smi: 13px;
+    --font-size-3xs-7: 9.7px;
+    --font-size-lgi-1: 19.1px;
+    --font-size-smi-7: 12.7px;
+    --font-size-base-5: 16.5px;
+    --font-size-smi-9: 12.9px;
+    --font-size-mini-6: 14.6px;
+    --font-size-mid-1: 17.1px;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray-100: #828282;
+    --color-gray-200: #1c1c1c;
+    --color-gray-300: #151414;
+    --color-gray-400: rgba(0, 0, 0, 0);
+    --color-red: #f52020;
+    --color-gainsboro-100: #d9d9d9;
+    --color-gainsboro: rgba(217, 217, 217, 0.53);
+    --color-whitesmoke: #f5f5f5;
+    --color-forestgreen: #43a647;
+  
+    /* Gaps */
+    --gap-7xl: 26px;
+    --gap-xl: 20px;
+    --gap-6xl-8: 25.8px;
+    --gap-2xl: 21px;
+    --gap-7xs: 6px;
+    --gap-mid: 17px;
+    --gap-mini: 15px;
+    --gap-12xl: 31px;
+    --gap-6xl: 25px;
+    --gap-11xl: 30px;
+    --gap-lg: 18px;
+    --gap-24xl-6: 43.6px;
+    --gap-3xl: 22px;
+    --gap-8xl: 27px;
+    --gap-7xs-5: 5.5px;
+    --gap-base: 16px;
+    --gap-9xl: 28px;
+    --gap-base-3: 16.3px;
+    --gap-mid-4: 17.4px;
+    --gap-4xl: 23px;
+    --gap-15xl-8: 34.8px;
+    --gap-18xl: 37px;
+    --gap-12xs-9: 0.9px;
+    --gap-2xs-5: 10.5px;
+    --gap-3xs-3: 9.3px;
+    --gap-smi-6: 12.6px;
+    --gap-lgi: 19px;
+    --gap-19xl: 38px;
+    --gap-10xs: 3px;
+    --gap-lgi-8: 19.8px;
+    --gap-smi: 13px;
+    --gap-13xl: 32px;
+    --gap-2xs: 11px;
+    --gap-16xl: 35px;
+    --gap-xs-5: 11.5px;
+    --gap-3xs-5: 9.5px;
+    --gap-3xs: 10px;
+    --gap-29xl-2: 48.2px;
+    --gap-5xl: 24px;
+    --gap-7xl-4: 26.4px;
+    --gap-mini-3: 14.3px;
+    --gap-3xs-1: 9.1px;
+    --gap-20xl-7: 39.7px;
+    --gap-lg-2: 18.2px;
+    --gap-4xs-8: 8.8px;
+    --gap-lg-3: 18.3px;
+    --gap-11xl-6: 30.6px;
+    --gap-32xl-6: 51.6px;
+    --gap-4xl-5: 23.5px;
+    --gap-23xl-7: 42.7px;
+  
+    /* Paddings */
+    --padding-xl: 20px;
+    --padding-109xl: 128px;
+    --padding-smi-7: 12.7px;
+    --padding-6xs: 7px;
+    --padding-8xs-8: 4.8px;
+    --padding-7xs: 6px;
+    --padding-5xs: 8px;
+    --padding-11xs: 2px;
+    --padding-9xs: 4px;
+    --padding-mini: 15px;
+    --padding-3xs: 10px;
+    --padding-mid: 17px;
+    --padding-8xs: 5px;
+    --padding-84xl: 103px;
+    --padding-6xl: 25px;
+    --padding-43xl-2: 62.2px;
+    --padding-21xl: 40px;
+    --padding-3xl: 22px;
+    --padding-28xl: 47px;
+    --padding-29xl: 48px;
+    --padding-base: 16px;
+    --padding-42xl: 61px;
+    --padding-43xl: 62px;
+    --padding-smi-8: 12.8px;
+    --padding-lgi: 19px;
+    --padding-10xs: 3px;
+    --padding-14xl: 33px;
+    --padding-38xl-1: 57.1px;
+    --padding-290xl: 309px;
+    --padding-135xl: 154px;
+    --padding-4xl: 23px;
+    --padding-4xs-4: 8.4px;
+    --padding-xs: 12px;
+    --padding-2xs: 11px;
+    --padding-7xs-9: 5.9px;
+    --padding-2xs-7: 10.7px;
+    --padding-55xl: 74px;
+    --padding-11xl: 30px;
+    --padding-sm: 14px;
+    --padding-80xl: 99px;
+    --padding-7xs-2: 5.2px;
+    --padding-27xl: 46px;
+    --padding-8xs-5: 4.5px;
+    --padding-10xs-3: 2.3px;
+    --padding-5xl: 24px;
+    --padding-7xl: 26px;
+    --padding-6xs-4: 6.4px;
+    --padding-12xs: 1px;
+    --padding-11xs-4: 1.4px;
+    --padding-6xs-2: 6.2px;
+    --padding-4xs: 9px;
+    --padding-10xl-1: 29.1px;
+    --padding-18xl: 37px;
+    --padding-16xl: 35px;
+    --padding-7xs-4: 5.4px;
+    --padding-25xl: 44px;
+    --padding-47xl: 66px;
+    --padding-15xl: 34px;
+    --padding-20xl: 39px;
+    --padding-17xl: 36px;
+    --padding-9xs-6: 3.6px;
+    --padding-184xl: 203px;
+    --padding-base-3: 16.3px;
+    --padding-base-9: 15.9px;
+    --padding-6xs-5: 6.5px;
+    --padding-11xs-7: 1.7px;
+    --padding-129xl: 148px;
+    --padding-6xs-3: 6.3px;
+    --padding-8xl: 27px;
+    --padding-xs-8: 11.8px;
+    --padding-2xl: 21px;
+    --padding-lg-6: 18.6px;
+    --padding-7xs-3: 5.3px;
+    --padding-3xs-6: 9.6px;
+    --padding-22xl: 41px;
+    --padding-10xs-4: 2.4px;
+    --padding-mini-2: 14.2px;
+    --padding-13xl: 32px;
+    --padding-91xl: 110px;
+    --padding-11xs-3: 1.3px;
+    --padding-21xl-6: 40.6px;
+  
+    /* Border radiuses */
+    --br-9xs-2: 3.2px;
+    --br-8xs-3: 4.3px;
+    --br-30xl: 49px;
+    --br-10xl-3: 29.3px;
+    --br-10xs-9: 2.9px;
+  }
+  

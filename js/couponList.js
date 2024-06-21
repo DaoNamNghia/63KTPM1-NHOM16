@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
       body.insertBefore(noti, header);
 
       noti.querySelector(".yes").addEventListener("click", function () {
-        // var deleteItem = document.querySelector(`tr.product-${productId}`);
-        // deleteItem.remove();
+        var deleteItem = document.querySelector(`tr.product-${productId}`);
+        tbody.removeChild(deleteItem);
         handleDeleteProducts(productId);
         body.removeChild(noti);
       });

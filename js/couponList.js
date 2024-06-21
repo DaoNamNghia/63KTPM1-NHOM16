@@ -60,7 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(function (response) {
         return response.json();
       })
-      .then(function () {});
+      .then(function () {
+        getProducts(renderProducts);
+      });
   }
   var trashicons = document.querySelectorAll(`.action i.fa-trash`);
   trashicons.forEach(function (icon) {
@@ -86,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
       body.insertBefore(noti, header);
 
       noti.querySelector(".yes").addEventListener("click", function () {
-        var deleteItem = document.querySelector(`tr.product-${productId}`);
-        deleteItem.remove();
+        // var deleteItem = document.querySelector(`tr.product-${productId}`);
+        // deleteItem.remove();
         handleDeleteProducts(productId);
         body.removeChild(noti);
       });

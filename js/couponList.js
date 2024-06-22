@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const addBtn = document.querySelector(".couponList .action .addBtn");
   addBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    window.location.href = "./couponAdd.html";
+    window.location.href = "63KTPM1-NHOM16/couponAdd.html";
     console.log("chuyển hướng");
   });
 
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var updateiconId = updateicon.getAttribute("data-id");
       console.log(updateiconId);
       localStorage.setItem("updateId", updateiconId);
-      window.location.href = "./couponUpdate.html";
+      window.location.href = "63KTPM1-NHOM16/couponUpdate.html";
     });
   });
 });

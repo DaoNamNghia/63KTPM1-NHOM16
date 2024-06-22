@@ -4,9 +4,16 @@ var index = localStorage.getItem("index")
   ? parseInt(localStorage.getItem("index"))
   : 0;
 
+function getRedirectUrl() {
+  if (window.location.hostname === "127.0.0.1") {
+    return "/couponList.html";
+  } else {
+    return "/63KTPM1-NHOM16/couponList.html";
+  }
+}
+
 escBtn.addEventListener("click", function () {
-  window.location.href =
-    "https://daonamnghia.github.io/63KTPM1-NHOM16/couponList.html";
+  window.location.href = getRedirectUrl();
 });
 // var form = document.querySelector("form");
 // form.addEventListener("submit", function (e) {
@@ -112,8 +119,7 @@ function handleCreateProducts() {
     getProducts(renderProducts);
     showToast(successMsg);
     setTimeout(function () {
-      window.location.href =
-        "https://daonamnghia.github.io/63KTPM1-NHOM16/couponList.html";
+      window.location.href = getRedirectUrl();
     }, 2000);
   });
   console.log(index);

@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const addBtn = document.querySelector(".couponList .action .addBtn");
   addBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    window.location.href =
-      "https://daonamnghia.github.io/63KTPM1-NHOM16/couponAdd.html";
+    window.location.href = "./couponAdd.html";
     console.log("chuyển hướng");
   });
 
@@ -60,9 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(function (response) {
         return response.json();
       })
-      .then(function () {
-        getProducts(renderProducts);
-      });
+      .then(function () {});
   }
   var trashicons = document.querySelectorAll(`.action i.fa-trash`);
   trashicons.forEach(function (icon) {
@@ -89,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       noti.querySelector(".yes").addEventListener("click", function () {
         var deleteItem = document.querySelector(`tr.product-${productId}`);
-        tbody.removeChild(deleteItem);
+        deleteItem.remove();
         handleDeleteProducts(productId);
         body.removeChild(noti);
         f;
@@ -107,8 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var updateiconId = updateicon.getAttribute("data-id");
       console.log(updateiconId);
       localStorage.setItem("updateId", updateiconId);
-      window.location.href =
-        "https://daonamnghia.github.io/63KTPM1-NHOM16/couponUpdate.html";
+      window.location.href = "./couponUpdate.html";
     });
   });
 });

@@ -2,9 +2,16 @@ var escBtn = document.querySelector(".action .escBtn");
 var updateBtn = document.querySelector("button.update");
 var form = document.querySelector("form");
 
+function getRedirectUrl() {
+  if (window.location.hostname === "127.0.0.1") {
+    return "/couponList.html";
+  } else {
+    return "/63KTPM1-NHOM16/couponList.html";
+  }
+}
+
 escBtn.addEventListener("click", function () {
-  window.location.href =
-    "https://daonamnghia.github.io/63KTPM1-NHOM16/couponList.html";
+  window.location.href = getRedirectUrl();
 });
 
 //toastBox
@@ -145,9 +152,8 @@ function handleUpdateProducts(e) {
     getProducts(renderProducts);
     showToast(successMsg);
     setTimeout(function () {
-      window.location.href =
-        "https://daonamnghia.github.io/63KTPM1-NHOM16/couponList.html";
-    }, 3000);
+      window.location.href = getRedirectUrl();
+    }, 2000);
   });
   console.log(index);
 }

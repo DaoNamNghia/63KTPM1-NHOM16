@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inder:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <form class="root">
+      <div class="frame-parent">
+        <div class="ng-nhp-parent">
+          <div class="ng-nhp">ĐĂNG NHẬP</div>
+          <div class="remember-me-wrapper">
+            <div class="account-input-inner-wrapper">
+              <b class="tn-ti-khon-container">
+                <p class="tn-ti-khon">Tên tài khoản hoặc địa chỉ email *</p>
+              </b>
+              <div class="adn"></div>
+            </div>
+            <div class="acquisitions-incorporated">
+              <div class="accusoft"></div>
+            </div>
+          </div>
+          <div class="input-field">
+            <input class="admin" placeholder="ADMIN" type="text" />
+          </div>
+        </div>
+        <div class="account-input-container">
+          <div class="password-input-wrapper">
+            <div class="password-input-wrapper1">
+              <b class="mt-khu">Mật khẩu *</b>
+              <b class="mt-khu1">Mật khẩu *</b>
+            </div>
+          </div>
+          <div class="password-input-container-parent">
+            <div class="password-input-container">
+              <div class="input-field1">
+                <div class="check"></div>
+                <input
+                  class="empty-placeholder"
+                  placeholder="**********"
+                  type="text"
+                />
+
+                <div class="angle-down"></div>
+              </div>
+            </div>
+            <div class="remember-me-wrapper-wrapper">
+              <div class="remember-me-wrapper1">
+                <input class="remember-me-inner-wrapper" type="checkbox" />
+
+                <b class="ghi-nh-mt">Ghi nhớ mật khẩu</b>
+              </div>
+            </div>
+            <div class="login-buttons">
+              <div class="button" id="loginButton">
+                <div class="ng-nhp1">
+                  <p class="ng-nhp2">ĐĂNG NHẬP</p>
+                </div>
+              </div>
+              <div class="qun-mt-khu-wrapper">
+                <div class="qun-mt-khu">Quên mật khẩu?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="input-field2">
+        <div class="check1"></div>
+      </div>
+      <div class="divider-wrapper">
+        <div class="divider"></div>
+      </div>
+      <div class="check2"></div>
+      <div class="signup-fields-parent">
+        <div class="signup-fields">
+          <div class="phone-number-field">
+            <div class="ng-k">
+              <p class="ng-k1">ĐĂNG KÝ</p>
+            </div>
+            <b class="s-in-thoi">Số điện thoại</b>
+          </div>
+          <input class="input-field3" type="text" />
+        </div>
+        <div class="email-field">
+          <b class="a-ch-email">Địa chỉ email*</b>
+          <input class="input-field4" type="text" />
+        </div>
+        <div class="mt-khu-parent">
+          <b class="mt-khu2">Mật khẩu *</b>
+          <div class="input-field-parent">
+            <input class="input-field5" type="text" />
+
+            <button class="button1">
+              <div class="ng-k2">ĐĂNG KÝ</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+          window.location.href = "./admin.html"; 
+        });
+      </script>
+  </body>
+</html>

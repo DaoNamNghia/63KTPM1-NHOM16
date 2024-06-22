@@ -5,7 +5,7 @@ var index = localStorage.getItem("index")
   : 0;
 
 function getRedirectUrl() {
-  if (window.location.hostname === "localhost") {
+  if (window.location.hostname === "127.0.0.1") {
     return "/couponList.html";
   } else {
     return "/63KTPM1-NHOM16/couponList.html";

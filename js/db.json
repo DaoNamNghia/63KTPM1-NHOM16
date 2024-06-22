@@ -26,33 +26,5 @@
   "profile": {
     "name": "typicode"
   },
-  "products": [
-    {
-      "id": "1",
-      "ma": "a",
-      "thoiGian": "2024-06-20-2024-06-11",
-      "giaTriGiam": "a",
-      "luotSuDung": "a",
-      "minUse": "s",
-      "trangThai": "3"
-    },
-    {
-      "id": "3",
-      "ma": "minh",
-      "thoiGian": "2024-06-12-2024-06-12",
-      "giaTriGiam": "a",
-      "luotSuDung": "a",
-      "minUse": "a",
-      "trangThai": "3"
-    },
-    {
-      "id": "4",
-      "ma": "ss",
-      "thoiGian": "2024-06-04-2024-06-20",
-      "giaTriGiam": "s",
-      "luotSuDung": "s",
-      "minUse": "s",
-      "trangThai": "1"
-    }
-  ]
+  "products": []
 }

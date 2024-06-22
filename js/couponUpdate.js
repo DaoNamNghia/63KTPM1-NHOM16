@@ -3,8 +3,7 @@ var updateBtn = document.querySelector("button.update");
 var form = document.querySelector("form");
 
 escBtn.addEventListener("click", function () {
-  window.location.href =
-    "https://daonamnghia.github.io/63KTPM1-NHOM16/couponList.html";
+  window.location.href = "../couponList.html";
 });
 
 //toastBox
@@ -145,8 +144,7 @@ function handleUpdateProducts(e) {
     getProducts(renderProducts);
     showToast(successMsg);
     setTimeout(function () {
-      window.location.href =
-        "https://daonamnghia.github.io/63KTPM1-NHOM16/couponList.html";
+      window.location.href = "../couponList.html";
     }, 3000);
   });
   console.log(index);

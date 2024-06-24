@@ -15,6 +15,125 @@ function getRedirectUrl() {
 escBtn.addEventListener("click", function () {
   window.location.href = getRedirectUrl();
 });
+
+//Thêm mới dữ liệu
+var productsAPI = "http://localhost:3000/products";
+function start() {
+  getProducts();
+}
+start();
+function getProducts() {
+  fetch(productsAPI)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (products) {
+      // Cập nhật index dựa trên số lượng sản phẩm hiện có
+      index = products.length;
+      localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
+    });
+}
+
+function createProducts(data, callback) {
+  var option = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  };
+  fetch(productsAPI, option)
+    .then(function (response) {
+      response.json();
+    })
+    .then(callback);
+}
+
+function handleCreateProducts() {
+  index++;
+  localStorage.setItem("index", index); // Lưu giá trị index mới vào localStorage
+  var name = document.querySelector(`input[name="name"]`).value;
+  var startDay = document.querySelector(`input[name="startDay"]`).value;
+  var endDay = document.querySelector(`input[name="endDay"]`).value;
+  var discountValue = document.querySelector(
+    `input[name="discountValue"]`
+  ).value;
+  var limitUse = document.querySelector(`input[name="limitUse"]`).value;
+  var limitValue = document.querySelector(`input[name="limitValue"]`).value;
+  var status = document.querySelector(`select[name="status"]`);
+  var selectedIndex = status.selectedIndex;
+  var selectedOption = status.options[selectedIndex].value;
+  if (
+    !name ||
+    !startDay ||
+    !endDay ||
+    !discountValue ||
+    !limitUse ||
+    !limitValue ||
+    !selectedOption
+  ) {
+    showToast(errorMsg);
+    return;
+  }
+  var formData = {
+    id: `${index}`,
+    ma: name,
+    thoiGian: `${startDay}-${endDay}`,
+    giaTriGiam: discountValue,
+    luotSuDung: limitUse,
+    minUse: limitValue,
+    trangThai: selectedOption,
+  };
+
+  createProducts(formData, function () {
+    showToast(successMsg);
+    setTimeout(function () {
+      window.location.href = getRedirectUrl();
+    }, 2000);
+  });
+  console.log(index);
+}
+
+//toastBox
+const toastBox = document.querySelector(".toastBox");
+var successMsg = `<i class="fa-solid fa-circle-check"></i> Thêm thành công`;
+var errorMsg = `<i class="fa-solid fa-circle-xmark"></i> Thêm thất bại,vui lòng nhập đủ thông tin`;
+var showToast = function (msg) {
+  let toast = document.createElement("div");
+  toast.classList.add("customToast");
+  toast.innerHTML = msg;
+  toastBox.appendChild(toast);
+  setTimeout(function () {
+    toastBox.removeChild(toast);
+  }, 5000);
+};
+
+//thêm dữ liệu khi bấm nút thêm
+
+addBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  handleCreateProducts(e);
+});
+
+//Cách cũ
+/*
+var escBtn = document.querySelector(".escBtn");
+var addBtn = document.querySelector("button.add");
+var index = localStorage.getItem("index")
+  ? parseInt(localStorage.getItem("index"))
+  : 0;
+
+function getRedirectUrl() {
+  if (window.location.hostname === "127.0.0.1") {
+    return "/couponList.html";
+  } else {
+    return "/63KTPM1-NHOM16/couponList.html";
+  }
+}
+
+escBtn.addEventListener("click", function () {
+  window.location.href = getRedirectUrl();
+});
 // var form = document.querySelector("form");
 // form.addEventListener("submit", function (e) {
 //   e.preventDefault();
@@ -145,3 +264,4 @@ addBtn.addEventListener("click", function (e) {
   e.preventDefault();
   handleCreateProducts(e);
 });
+*/
